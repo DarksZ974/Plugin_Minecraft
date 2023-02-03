@@ -46,3 +46,13 @@ processResources {
         expand props
     }
 }
+
+tasks.register("buildAndMove") {
+    dependsOn("build");
+    doLast {
+        copy {
+            from String.format("%s/%s/%s-%s.jar", getBuildDir(), "libs", archivesBaseName, version);
+            into String.format("%s/%s", getProjectDir(), "server/plugins");
+        }
+    }
+}

@@ -1,0 +1,4 @@
+name: WorkshopPlugin
+version: 1.0
+author: darksz974
+main: re.darksz974.plugin.workshop.WorkshopPlugin
